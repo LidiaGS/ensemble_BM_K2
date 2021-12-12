@@ -28,7 +28,7 @@ cd ensemble_BM_K2
 
 mkdir tools && cd tools
 
-export TOOLS_PATH=$pwd
+export TOOLS_PATH=$(pwd)
 ```
 
 * BLAST 
@@ -64,11 +64,13 @@ cd $TOOLS_PATH
 
 wget https://github.com/DerrickWood/kraken2/archive/refs/tags/v2.0.8-beta.tar.gz
 
+mv v2.0.8-beta.tar.gz kraken2-2.0.8-beta.tar.gz
+
 tar zxvpf kraken2-2.0.8-beta.tar.gz
 
 cd kraken2-2.0.8-beta
 
-install_kraken2.sh $TOOLS_PATH/kraken2-2.0.8-beta/kraken2-2.0.8-beta
+./install_kraken2.sh $TOOLS_PATH/kraken2-2.0.8-beta/kraken2-2.0.8-beta
 
 export PATH=$PATH:$TOOLS_PATH/kraken2-2.0.8-beta/kraken2-2.0.8-beta
 ```
